@@ -1,0 +1,66 @@
+/* Header
+ * All of header style
+ */
+header{
+	padding: 5.5rem 5.5rem 0 5.5rem;
+	svg{
+		width: 63px;
+		.Line, .st1, .st2{
+			@include keyframes('fadein') {
+				0% {opacity: 0;}
+				100% {opacity: 1;}
+			}
+			@include show-fade(fadein 4s);
+		}
+	}
+	ul{
+		li{
+			text-transform: $uppercase;
+			letter-spacing: $letter-spacing-sm;
+			@include keyframes('fadein') {
+				0% {opacity: 0;}
+				100% {opacity: 1;}
+			}
+			@include show-fade(fadein 4s);
+			&:first-child{
+				display: inline;
+				cursor: $pointer;
+				&:before{
+					content:'';
+					height:1px;
+					width:0%;
+					position:absolute;
+					top:50%;
+					left:105%;
+					background-color:#000;
+					-webkit-transition: width 500ms, left 500ms;
+				    	-moz-transition: width 500ms, left 500ms;
+				    		-ms-transition: width 500ms, left 500ms;
+				        		transition: width 500ms, left 500ms;
+				}
+				&:hover:before{
+					width:110%;
+				    left:-5%;
+				    -webkit-transition: width 500ms;
+				    	-moz-transition: width 500ms;
+				    		-ms-transition: width 500ms;
+				        		transition: width 500ms;
+				}
+				&:after{
+					content: '';
+					display: block;
+					height: 1px;
+					width: 11rem;
+					background: $black;
+					margin: auto;
+					@include keyframes('lineanimation'){
+						0%{width: 0;}
+						100%{width: 11rem;}
+					}
+					@include show-fade(lineanimation 2s);
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,32 @@
+section{
+	padding: $content-padding;
+}
+
+.index {
+	.row{
+		&:first-child{
+			margin-top: 5rem;
+		}
+		&:nth-child(2){
+			margin-top: 6em;
+		}	
+	}
+	a{
+		position: relative;
+		background-image: linear-gradient(to left, black 50%, transparent 0%);
+		-webkit-transition: background-position 1s;
+			-moz-transition: background-position 1s;
+	    		transition: background-position 1s;
+	    background-size: 200%;
+	    &.button:hover, .button:active{
+	    	color: $white;
+			background-position: 12.4rem;
+			text-decoration: none;
+	    }
+	}
+}
+
+.home{
+	// width: 90%;
+	// border: 1px solid black;
+}

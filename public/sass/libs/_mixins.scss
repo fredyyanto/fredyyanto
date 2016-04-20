@@ -1,0 +1,26 @@
+@mixin keyframes ($name) {
+    @-webkit-keyframes #{$name}{
+        @content;
+    }
+    @-moz-keyframes #{$name}{
+        @content;
+    }
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+@mixin show-fade($function){
+	-webkit-animation: $function;
+		-moz-animation: $function;
+			animation: $function;
+}
+
+@mixin button(){
+    color: $black;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-family: courier;
+    text-transform: uppercase;
+    @content;
+}

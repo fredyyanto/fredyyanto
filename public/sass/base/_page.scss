@@ -1,0 +1,25 @@
+body{
+	background-image: url('../assets/concrete_seamless.png');
+	background-position: center;
+	font-family: $main-font !important;
+}
+
+.button{
+	@include button {
+		padding: $button-padding-sm;
+	}
+}
+
+/* Grid System */
+.grid{
+	&-item{
+		float: left;           
+	    border: 1px solid black;
+	    width: 33.3%;
+	    margin-left: -1px;
+	    margin-bottom: -1px;
+	    &:after{
+	    	clear: both;
+	    }
+	}
+}

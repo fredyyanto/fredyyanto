@@ -1,0 +1,13 @@
+<div class="container-fluid text-center index" ng-if="$state.current.name === main.currentState">
+	<div class="row">
+		<p>"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. </p>
+		<p>Don't settle. As with all matters of the heart, You'll know when you find it."</p>
+		<p>- Steve Jobs -</p>
+	</div>
+	
+	<div class="row">
+		<a ui-sref=".home" class="button" ng-click="main.startJourney()">Start Journey</a>
+	</div>
+</div>
+
+<div class="child" ui-view></div>

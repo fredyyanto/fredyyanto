@@ -1,0 +1,12 @@
+/* Angular */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.ng-enter{
+	z-index: 8888;
+}
+
+.ng-leave{
+	z-index: 9999;
+}

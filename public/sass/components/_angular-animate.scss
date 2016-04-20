@@ -1,0 +1,41 @@
+.parent{
+	&.ng-enter{
+		@include keyframes('fadeup') {
+			0%{
+				-webkit-transform: translate(0, 1.5em);
+					-moz-transform: translate(0, 1.5em);
+						transform: translate(0, 1.5em);
+				opacity: 0;
+			}
+
+			100%{
+				-webkit-transform: translate(0, 0);
+					-moz-transform: translate(0, 0);
+						transform: translate(0, 0);
+				opacity: 1;
+			}
+		}
+		@include show-fade(fadeup 2.25s forwards);
+	}
+}
+
+.child{
+	&.ng-enter{
+		@include keyframes('fadeup') {
+			0%{
+				-webkit-transform: translate(0, 1.5em);
+					-moz-transform: translate(0, 1.5em);
+						transform: translate(0, 1.5em);
+				opacity: 0;
+			}
+
+			100%{
+				-webkit-transform: translate(0, 0);
+					-moz-transform: translate(0, 0);
+						transform: translate(0, 0);
+				opacity: 1;
+			}
+		}
+		@include show-fade(fadeup 2.25s forwards);
+	}
+}

@@ -1,0 +1,36 @@
+/* Page Border */
+.page-border{
+	position:fixed;
+	z-index:999999;
+	pointer-events:none;
+	.bottom-border, .left-border, .right-border, .top-border{
+		background: $white-grey;
+		position:fixed;
+		z-index:9999;
+	}
+	.bottom-border, .top-border{
+		width:100%;
+		padding:11px;
+		left:0;
+	}
+	.left-border, .right-border{
+		height:100%;
+		top:0;
+	}
+	.bottom-border{
+		bottom:0;
+	}
+	.top-border{
+		top:0;
+	}
+	.right-border{
+		right:0;
+	}
+	.left-border{
+		left:0;
+	}
+	>.top-border, >.right-border, >.bottom-border, >.left-border{
+		padding:20px;
+		background: $white !important;
+	}
+}
