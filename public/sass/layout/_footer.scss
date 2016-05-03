@@ -1,0 +1,44 @@
+/* Footer
+ * All of footer style
+ */
+footer{
+	padding: $content-padding;
+	&:before{
+		content: '';
+		width: 50%;
+		height: 1px;
+		background-color: $black;
+		display: inline-block;
+	}
+	.footer{
+		margin: 2rem;
+		#contact{
+			span{
+				display: block;
+				&:nth-child(2){
+					margin-top: 1rem;
+				}
+			}
+			&:after{
+				content: '';
+				margin: 2rem 0 2rem 0;
+				width: 10px;
+				height: 2px;
+				background-color: $black;
+				display: inline-block;
+			}
+		}
+		#social-media{
+			font-size: 1.5em;
+			margin-bottom: 2rem;
+			a{
+				color: $black;
+			}
+		}
+		#made{
+			i{
+				font-size: 1rem;
+			}
+		}
+	}
+}

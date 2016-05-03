@@ -6,6 +6,7 @@
   var container = document.querySelector( 'div.container' ),
       triggerBttn = document.getElementById( 'trigger-overlay' ),
       overlay = document.querySelector( 'div.overlay' ),
+      closeBttn = overlay.getElementsByClassName( 'overlay-close' ),
       transEndEventNames = {
         'WebkitTransition': 'webkitTransitionEnd',
         'MozTransition': 'transitionend',
@@ -19,7 +20,7 @@
   for (var i = toggles.length - 1; i >= 0; i--) {
     var toggle = toggles[i];
     toggleHandler(toggle);
-  };
+  }
 
   function toggleHandler(toggle) {
     toggle.addEventListener( "click", function(e) {
@@ -54,5 +55,16 @@
   }
 
   triggerBttn.addEventListener( 'click', toggleOverlay );
+  
+  for(var i = 0; i < closeBttn.length; i++){
+    closeBttn[i].addEventListener( 'click', function(){
+        toggleOverlay();
+        for(var i = 0; i < toggles.length; i++){
+          if(toggles[i].classList.contains('is-active') == true){
+              toggles[i].classList.remove('is-active');
+          }
+        }
+    });
+  }
 
 })();

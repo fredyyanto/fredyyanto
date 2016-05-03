@@ -5,7 +5,8 @@
 	<title>Fredy Yanto</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="public/css/main.css">
-	<link rel="stylesheet" type="text/css" href="public/css/overlay.css">
+	<link rel="stylesheet" type="text/css" href="public/css/hamburger/overlay.css">
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="public/bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="public/bower_components/bootstrap/dist/css/bootstrap-theme.css">
 </head>
@@ -20,7 +21,7 @@
 	<button 
 		class="c-hamburger c-hamburger--htx" 
 		id="trigger-overlay"
-		ng-hide="main.showNav">
+		ng-hide="main.showComponents">
         <span>toggle menu</span>
     </button>
 
@@ -28,11 +29,11 @@
 	<div class="overlay overlay-contentscale">
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Profile</a></li>
-				<li><a href="#">Experience</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a ui-sref="index.home" class="overlay-close">Home</a></li>
+				<li><a href="#" class="overlay-close">Profile</a></li>
+				<li><a href="#" class="overlay-close">Experience</a></li>
+				<li><a href="#" class="overlay-close">Gallery</a></li>
+				<li><a href="#" class="overlay-close">Blog</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -90,6 +91,24 @@
 		</header>
 
 		<section class="parent" ui-view></section>
+
+		<footer class="text-center" ng-hide="main.showComponents">
+			<div class="container-fluid footer">
+				<div id="contact">
+					<span>Contact</span>
+					<span>+62 819 95066889</span>
+					<span>fredy4th@gmail.com</span>
+				</div>
+				<div id="social-media">
+					<a href="https://www.instagram.com/fredy_yanto"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+					<a href="https://www.facebook.com/fredy.yanto.5"><span class="fa fa-facebook-square" aria-hidden="true"></span></a>
+					<a href="https://id.linkedin.com/in/fredy-yanto-28a10149"><span class="fa fa-linkedin-square" aria-hidden="true"></span></a>
+				</div>
+				<div id="made">
+					<span>Made with <i class="fa fa-heart" aria-hidden="true"></i> by Fredy Yanto</span>
+				</div>
+			</div>
+		</footer>
 	</div>
 </body>
 	<!-- vendor -->

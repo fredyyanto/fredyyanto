@@ -402,17 +402,19 @@ header ul li:first-child:after {
     width: 11rem;
   }
 }
+/* Section
+ * All of section part
+ */
 section {
   padding: 5.5rem;
 }
-
-.index .row:first-child {
+section .index .row:first-child {
   margin-top: 5rem;
 }
-.index .row:nth-child(2) {
+section .index .row:nth-child(2) {
   margin-top: 6em;
 }
-.index a {
+section .index a {
   position: relative;
   background-image: linear-gradient(to left, black 50%, transparent 0%);
   -webkit-transition: background-position 1s;
@@ -420,10 +422,51 @@ section {
   transition: background-position 1s;
   background-size: 200%;
 }
-.index a.button:hover, .index a .button:active {
+section .index a.button:hover, section .index a .button:active {
   color: #ffffff;
   background-position: 12.4rem;
   text-decoration: none;
+}
+
+/* Footer
+ * All of footer style
+ */
+footer {
+  padding: 5.5rem;
+}
+footer:before {
+  content: '';
+  width: 50%;
+  height: 1px;
+  background-color: #000000;
+  display: inline-block;
+}
+footer .footer {
+  margin: 2rem;
+}
+footer .footer #contact span {
+  display: block;
+}
+footer .footer #contact span:nth-child(2) {
+  margin-top: 1rem;
+}
+footer .footer #contact:after {
+  content: '';
+  margin: 2rem 0 2rem 0;
+  width: 10px;
+  height: 2px;
+  background-color: #000000;
+  display: inline-block;
+}
+footer .footer #social-media {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+footer .footer #social-media a {
+  color: #000000;
+}
+footer .footer #made i {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
